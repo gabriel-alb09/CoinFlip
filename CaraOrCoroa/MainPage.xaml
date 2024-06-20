@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CaraOrCoroa.MainPage"
+             Title="MainPage">
+             
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label
+                Text="CARA OU COROA"      
+                HorizontalTextAlignment="Center"
+                />
+            <Image
+                x:Name="retorno"
+                HeightRequest="185"
+                Aspect="AspectFit"                      
+                />
+            <Label 
+                x:Name="retorno2"
+                HorizontalTextAlignment="Center"
+                FontSize="15"                
+                />
+            <Label
+                x:Name="retorno3"
+                HorizontalTextAlignment="Center"
+                FontSize="15"
+                />
+            <Picker x:Name="escolha" Title="selecione o seu lado da Moeda"
+         FontSize="15"
+         
+                    >
+                <Picker.Items>
+                    <x:String>CARA</x:String>
+                    <x:String>COROA</x:String>
+                </Picker.Items>
+            </Picker>
+            <Button
+                x:Name="CounterBtn"
+                Text="Girar Moeda" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
